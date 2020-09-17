@@ -4,10 +4,10 @@
  * %%
  * Copyright (C) 2009 - 2016 Ultra Commerce
  * %%
- * Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
+ * Licensed under the Ultra Fair Use License Agreement, Version 1.0
  * (the "Fair Use License" located  at http://license.ultracommerce.org/fair_use_license-1.0.txt)
- * unless the restrictions on use therein are violated and require payment to Broadleaf in which case
- * the Broadleaf End User License Agreement (EULA), Version 1.1
+ * unless the restrictions on use therein are violated and require payment to Ultra in which case
+ * the Ultra End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.ultracommerce.org/commercial_license-1.1.txt)
  * shall apply.
  * 
@@ -18,7 +18,7 @@
 
 package com.ultracommerce.presentation.cache.service;
 
-import com.ultracommerce.presentation.model.BroadleafTemplateContext;
+import com.ultracommerce.presentation.model.UltraTemplateContext;
 
 import java.util.Map;
 
@@ -42,7 +42,7 @@ public class SimpleCacheKeyResolver implements TemplateCacheKeyResolverService {
      * @param context the context that the processor is executing in
      */
     @Override
-    public String resolveCacheKey(String tagName, Map<String, String> tagAttributes, String documentName, Integer lineNumber, BroadleafTemplateContext context) {
+    public String resolveCacheKey(String tagName, Map<String, String> tagAttributes, String documentName, Integer lineNumber, UltraTemplateContext context) {
         String cacheKey = getStringValue(TemplateCacheKeyResolverService.CACHE_KEY_ATTRIBUTE, tagAttributes, true, context);
         if (TemplateCacheKeyResolverService.NONE_CACHE_VALUE.equals(cacheKey)) {
             return null;
@@ -55,7 +55,7 @@ public class SimpleCacheKeyResolver implements TemplateCacheKeyResolverService {
         return sb.toString();
     }
 
-    protected String getStringValue(String attrName, Map<String, String> tagAttributes, boolean removeAttribute, BroadleafTemplateContext context) {
+    protected String getStringValue(String attrName, Map<String, String> tagAttributes, boolean removeAttribute, UltraTemplateContext context) {
         if (tagAttributes.containsKey(attrName)) {
             String cacheKeyParam = tagAttributes.get(attrName);
             if (removeAttribute) {

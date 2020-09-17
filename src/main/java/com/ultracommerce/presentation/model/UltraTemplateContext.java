@@ -4,10 +4,10 @@
  * %%
  * Copyright (C) 2009 - 2016 Ultra Commerce
  * %%
- * Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
+ * Licensed under the Ultra Fair Use License Agreement, Version 1.0
  * (the "Fair Use License" located  at http://license.ultracommerce.org/fair_use_license-1.0.txt)
- * unless the restrictions on use therein are violated and require payment to Broadleaf in which case
- * the Broadleaf End User License Agreement (EULA), Version 1.1
+ * unless the restrictions on use therein are violated and require payment to Ultra in which case
+ * the Ultra End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.ultracommerce.org/commercial_license-1.1.txt)
  * shall apply.
  * 
@@ -30,7 +30,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author Jay Aisenbrey (cja769)
  *
  */
-public interface BroadleafTemplateContext {
+public interface UltraTemplateContext {
 
     /**
      * @return The object that the {@code value} evaluates to using the underlying template language
@@ -39,53 +39,53 @@ public interface BroadleafTemplateContext {
     
     /**
      * @param allowParametersWithoutValue true if assignations where the key has no value assigning to it is valid
-     * @return The list of {@link BroadleafAssignation}s that were evaluated from {@code value}
+     * @return The list of {@link UltraAssignation}s that were evaluated from {@code value}
      */
-    public List<BroadleafAssignation> getAssignationSequence(String value, boolean allowParametersWithoutValue);
+    public List<UltraAssignation> getAssignationSequence(String value, boolean allowParametersWithoutValue);
 
     /**
      * @param tagName The name of the tag that is being created
      * @param attributes The attributes that should be added to the tag
      * @param useDoubleQuotes True if the attribute values should be surrounded by double quotes and false if they should use single quotes
      */
-    public BroadleafTemplateNonVoidElement createNonVoidElement(String tagName, Map<String, String> attributes, boolean useDoubleQuotes);
+    public UltraTemplateNonVoidElement createNonVoidElement(String tagName, Map<String, String> attributes, boolean useDoubleQuotes);
 
     /**
      * @param tagName The name of the tag that is being created
      */
-    public BroadleafTemplateNonVoidElement createNonVoidElement(String tagName);
+    public UltraTemplateNonVoidElement createNonVoidElement(String tagName);
 
     /**
      * @param tagName The name of the tag that is being created
      * @param attributes The attributes that should be added to the tag
      * @param useDoubleQuotes True if the attribute values should be surrounded by double quotes and false if they should use single quotes
      */
-    public BroadleafTemplateElement createStandaloneElement(String tagName, Map<String, String> attributes, boolean useDoubleQuotes);
+    public UltraTemplateElement createStandaloneElement(String tagName, Map<String, String> attributes, boolean useDoubleQuotes);
 
     /**
      * @param tagName The name of the tag that is being created
      */
-    public BroadleafTemplateElement createStandaloneElement(String tagName);
+    public UltraTemplateElement createStandaloneElement(String tagName);
 
     /**
-     * @param text The text that the {@link BroadleafTemplateElement} should represent
+     * @param text The text that the {@link UltraTemplateElement} should represent
      */
-    public BroadleafTemplateElement createTextElement(String text);
+    public UltraTemplateElement createTextElement(String text);
 
     /**
-     * @return A new {@link BroadleafTemplateModel} that can have elements added to it to make a snippet of markup
+     * @return A new {@link UltraTemplateModel} that can have elements added to it to make a snippet of markup
      */
-    public BroadleafTemplateModel createModel();
+    public UltraTemplateModel createModel();
     
     /**
      * Sets a variable on the given {@code element} 
      */
-    public void setNodeLocalVariable(BroadleafTemplateElement element, String key, Object value);
+    public void setNodeLocalVariable(UltraTemplateElement element, String key, Object value);
     
     /**
      * Sets a map of variables on the give {@code element}
      */
-    public void setNodeLocalVariables(BroadleafTemplateElement element, Map<String, Object> variableMap);
+    public void setNodeLocalVariables(UltraTemplateElement element, Map<String, Object> variableMap);
     
     /**
      * @return The object on the current variable model whose key was {@code name}
@@ -95,7 +95,7 @@ public interface BroadleafTemplateContext {
     /**
      * @return Gets the current Spring {@link BindStatus} for {@code attributeValue}
      */
-    public BroadleafBindStatus getBindStatus(String attributeValue);
+    public UltraBindStatus getBindStatus(String attributeValue);
     
     /**
      * @return The current HttpServletRequest if it exists or null otherwise

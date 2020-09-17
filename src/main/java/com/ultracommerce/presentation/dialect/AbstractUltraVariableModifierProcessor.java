@@ -4,10 +4,10 @@
  * %%
  * Copyright (C) 2009 - 2016 Ultra Commerce
  * %%
- * Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
+ * Licensed under the Ultra Fair Use License Agreement, Version 1.0
  * (the "Fair Use License" located  at http://license.ultracommerce.org/fair_use_license-1.0.txt)
- * unless the restrictions on use therein are violated and require payment to Broadleaf in which case
- * the Broadleaf End User License Agreement (EULA), Version 1.1
+ * unless the restrictions on use therein are violated and require payment to Ultra in which case
+ * the Ultra End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.ultracommerce.org/commercial_license-1.1.txt)
  * shall apply.
  * 
@@ -20,13 +20,13 @@ package com.ultracommerce.presentation.dialect;
 import java.util.List;
 
 /**
- * Default implementation of {@link BroadleafVariableModifierProcessor} that provides some defaults
+ * Default implementation of {@link UltraVariableModifierProcessor} that provides some defaults
  * 
  * @author Jay Aisenbrey (cja769)
  * @deprecated
  */
 @Deprecated
-public abstract class AbstractBroadleafVariableModifierProcessor implements BroadleafVariableModifierProcessor {
+public abstract class AbstractUltraVariableModifierProcessor implements UltraVariableModifierProcessor {
 
     @Override
     public boolean useGlobalScope() {
@@ -35,7 +35,7 @@ public abstract class AbstractBroadleafVariableModifierProcessor implements Broa
     
     @Override
     public int getPrecedence() {
-        return BroadleafProcessor.DEFAULT_PRECEDENCE;
+        return UltraProcessor.DEFAULT_PRECEDENCE;
     }
     
     @Override
@@ -45,6 +45,6 @@ public abstract class AbstractBroadleafVariableModifierProcessor implements Broa
     
     @Override
     public String getPrefix() {
-        return BroadleafProcessor.DEFAULT_PREFIX;
+        return UltraProcessor.DEFAULT_PREFIX;
     }
 }

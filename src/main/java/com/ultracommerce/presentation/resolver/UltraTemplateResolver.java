@@ -4,10 +4,10 @@
  * %%
  * Copyright (C) 2009 - 2016 Ultra Commerce
  * %%
- * Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
+ * Licensed under the Ultra Fair Use License Agreement, Version 1.0
  * (the "Fair Use License" located  at http://license.ultracommerce.org/fair_use_license-1.0.txt)
- * unless the restrictions on use therein are violated and require payment to Broadleaf in which case
- * the Broadleaf End User License Agreement (EULA), Version 1.1
+ * unless the restrictions on use therein are violated and require payment to Ultra in which case
+ * the Ultra End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.ultracommerce.org/commercial_license-1.1.txt)
  * shall apply.
  * 
@@ -25,7 +25,7 @@ import java.io.InputStream;
  * @author Jay Aisenbrey (cja769)
  *
  */
-public interface BroadleafTemplateResolver {
+public interface UltraTemplateResolver {
     
     /**
      * @return The string that should be automatically added to the beginning of given 
@@ -65,19 +65,19 @@ public interface BroadleafTemplateResolver {
     public String getCharacterEncoding();
     
     /**
-     * @return The order in the list of all {@code BroadleafThymeleafTemplateResolver} that this resolver should run
+     * @return The order in the list of all {@code UltraThymeleafTemplateResolver} that this resolver should run
      */
     public Integer getOrder();
     
     /**
      * @return The type of templates this resolver resolves for
      */
-    public BroadleafTemplateMode getTemplateMode();
+    public UltraTemplateMode getTemplateMode();
     
     /**
      * @return The type of resolver this resolver is
      */
-    public BroadleafTemplateResolverType getResolverType();
+    public UltraTemplateResolverType getResolverType();
     
     /**
      * @return true if this resolver should be in the set of email resolvers

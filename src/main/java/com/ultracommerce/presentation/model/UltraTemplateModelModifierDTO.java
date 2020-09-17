@@ -4,10 +4,10 @@
  * %%
  * Copyright (C) 2009 - 2016 Ultra Commerce
  * %%
- * Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
+ * Licensed under the Ultra Fair Use License Agreement, Version 1.0
  * (the "Fair Use License" located  at http://license.ultracommerce.org/fair_use_license-1.0.txt)
- * unless the restrictions on use therein are violated and require payment to Broadleaf in which case
- * the Broadleaf End User License Agreement (EULA), Version 1.1
+ * unless the restrictions on use therein are violated and require payment to Ultra in which case
+ * the Ultra End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.ultracommerce.org/commercial_license-1.1.txt)
  * shall apply.
  * 
@@ -17,46 +17,46 @@
  */
 package com.ultracommerce.presentation.model;
 
-import com.ultracommerce.presentation.dialect.AbstractBroadleafModelModifierProcessor;
+import com.ultracommerce.presentation.dialect.AbstractUltraModelModifierProcessor;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Holder object for passing around a {@link BroadleafTemplateModel} and a Map that represents the parameters
- * that should be used when creating the tag. See {@link AbstractBroadleafModelModifierProcessor}
+ * Holder object for passing around a {@link UltraTemplateModel} and a Map that represents the parameters
+ * that should be used when creating the tag. See {@link AbstractUltraModelModifierProcessor}
  * 
  * @author Jay Aisenbrey (cja769)
  */
-public class BroadleafTemplateModelModifierDTO {
+public class UltraTemplateModelModifierDTO {
 
-    protected BroadleafTemplateModel model;
+    protected UltraTemplateModel model;
     protected Map<String, String> formParameters = new HashMap<>();
     protected Map<String, Object> formLocalVariables = new HashMap<>();
     protected String replacementTagName;
     
-    public BroadleafTemplateModelModifierDTO() {
+    public UltraTemplateModelModifierDTO() {
         // default constructor intentionally left empty
     }
 
-    public BroadleafTemplateModelModifierDTO(BroadleafTemplateModel model, Map<String, String> formParameters, String replacementTagName) {
+    public UltraTemplateModelModifierDTO(UltraTemplateModel model, Map<String, String> formParameters, String replacementTagName) {
         this.model = model;
         this.formParameters = formParameters;
         this.replacementTagName = replacementTagName;
     }
     
-    public BroadleafTemplateModelModifierDTO(BroadleafTemplateModel model, Map<String, String> formParameters, Map<String, Object> formLocalVariables, String replacementTagName) {
+    public UltraTemplateModelModifierDTO(UltraTemplateModel model, Map<String, String> formParameters, Map<String, Object> formLocalVariables, String replacementTagName) {
         this.model = model;
         this.formParameters = formParameters;
         this.formLocalVariables = formLocalVariables;
         this.replacementTagName = replacementTagName;
     }
 
-    public BroadleafTemplateModel getModel() {
+    public UltraTemplateModel getModel() {
         return model;
     }
 
-    public void setModel(BroadleafTemplateModel model) {
+    public void setModel(UltraTemplateModel model) {
         this.model = model;
     }
 
