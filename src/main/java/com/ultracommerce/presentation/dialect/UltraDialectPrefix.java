@@ -31,8 +31,8 @@ public class UltraDialectPrefix {
     public static final String UC = "blc";
     
     /**
-     * Specifies the {@link UltraProcessor} should use the "blc_admin" prefix, for use in the Ultra admin application
+     * Specifies the {@link UltraProcessor} should use the "uc_admin" prefix, for use in the Ultra admin application
      */
-    public static final String UC_ADMIN = "blc_admin";
+    public static final String UC_ADMIN = "uc_admin";
     
 }
