@@ -4,10 +4,10 @@
  * %%
  * Copyright (C) 2009 - 2016 Ultra Commerce
  * %%
- * Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
+ * Licensed under the Ultracommerce Fair Use License Agreement, Version 1.0
  * (the "Fair Use License" located  at http://license.ultracommerce.org/fair_use_license-1.0.txt)
- * unless the restrictions on use therein are violated and require payment to Broadleaf in which case
- * the Broadleaf End User License Agreement (EULA), Version 1.1
+ * unless the restrictions on use therein are violated and require payment to Ultracommerce in which case
+ * the Ultracommerce End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.ultracommerce.org/commercial_license-1.1.txt)
  * shall apply.
  * 
@@ -17,14 +17,14 @@
  */
 package com.ultracommerce.presentation.dialect;
 
-import com.ultracommerce.presentation.model.BroadleafTemplateContext;
-import com.ultracommerce.presentation.model.BroadleafTemplateModel;
+import com.ultracommerce.presentation.model.UltracommerceTemplateContext;
+import com.ultracommerce.presentation.model.UltracommerceTemplateModel;
 
 import java.util.Map;
 
 /**
  * <p>
- * A tag processor that's used to replace the tag that it was triggered on with a {@link BroadleafTemplateModel}. This allows implementations to
+ * A tag processor that's used to replace the tag that it was triggered on with a {@link UltracommerceTemplateModel}. This allows implementations to
  * completely replace the element that invokes this with a brand new DOM (usually HTML).
  * 
  * <p>
@@ -48,17 +48,17 @@ import java.util.Map;
  * </pre>
  * 
  * <p>
- * This differs from the {@link BroadleafModelModifierProcessor} in that this {@link BroadleafTagReplacementProcessor} completely replaces the tag with a new model
- * while the {@link BroadleafModelModifierProcessor} is designed to augment the originally-written dom.
+ * This differs from the {@link UltracommerceModelModifierProcessor} in that this {@link UltracommerceTagReplacementProcessor} completely replaces the tag with a new model
+ * while the {@link UltracommerceModelModifierProcessor} is designed to augment the originally-written dom.
  * 
  * @author Jay Aisenbrey (cja769)
  *
  */
-public interface BroadleafTagReplacementProcessor extends BroadleafProcessor {
+public interface UltracommerceTagReplacementProcessor extends UltracommerceProcessor {
 
     /**
      * @return true if the model returned has template logic that needs to reprocessed. This should return true if any of the elements added to
-     * the resulting {@link BroadleafTemplateModel} from the given {@link BroadleafTemplateContext} have additional expressions or includes that
+     * the resulting {@link UltracommerceTemplateModel} from the given {@link UltracommerceTemplateContext} have additional expressions or includes that
      * are template-processing specific (e.g. extra includes, addition of new variables in the tags, etc).
      */
     public boolean replacementNeedsProcessing();
@@ -67,9 +67,9 @@ public interface BroadleafTagReplacementProcessor extends BroadleafProcessor {
      * 
      * @param tagName The name of the tag the event was triggered on
      * @param tagAttributes A map of String to String of all of the attributes on the tag
-     * @param context The {@link BroadleafTemplateContext} that should be used to perform operations on the tag with
-     * @return The {@link BroadleafTemplateModel} that should replace the tag that the event was triggered on
+     * @param context The {@link UltracommerceTemplateContext} that should be used to perform operations on the tag with
+     * @return The {@link UltracommerceTemplateModel} that should replace the tag that the event was triggered on
      */
-    public BroadleafTemplateModel getReplacementModel(String tagName, Map<String, String> tagAttributes, BroadleafTemplateContext context);
+    public UltracommerceTemplateModel getReplacementModel(String tagName, Map<String, String> tagAttributes, UltracommerceTemplateContext context);
 
 }

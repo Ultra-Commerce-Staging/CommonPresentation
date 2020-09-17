@@ -4,10 +4,10 @@
  * %%
  * Copyright (C) 2009 - 2016 Ultra Commerce
  * %%
- * Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
+ * Licensed under the Ultracommerce Fair Use License Agreement, Version 1.0
  * (the "Fair Use License" located  at http://license.ultracommerce.org/fair_use_license-1.0.txt)
- * unless the restrictions on use therein are violated and require payment to Broadleaf in which case
- * the Broadleaf End User License Agreement (EULA), Version 1.1
+ * unless the restrictions on use therein are violated and require payment to Ultracommerce in which case
+ * the Ultracommerce End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.ultracommerce.org/commercial_license-1.1.txt)
  * shall apply.
  * 
@@ -20,13 +20,13 @@ package com.ultracommerce.presentation.resolver;
 import java.io.InputStream;
 
 /**
- * Abstract implementation of {@link BroadleafTemplateResolver} that has some defaults.
+ * Abstract implementation of {@link UltracommerceTemplateResolver} that has some defaults.
  * Most of the time you'll want to create a bean of an existing implementation of this class.
  * 
  * @author Jay Aisenbrey (cja769)
  *
  */
-public abstract class AbstractBroadleafTemplateResolver implements BroadleafTemplateResolver {
+public abstract class AbstractUltracommerceTemplateResolver implements UltracommerceTemplateResolver {
 
     protected String prefix = "";
     protected String suffix = "";
@@ -35,7 +35,7 @@ public abstract class AbstractBroadleafTemplateResolver implements BroadleafTemp
     protected Long cacheTimeToLive = 0L;
     protected String characterEncoding = "UTF-8";
     protected Integer order = 1000;
-    protected BroadleafTemplateMode templateMode = BroadleafTemplateMode.HTML5;
+    protected UltracommerceTemplateMode templateMode = UltracommerceTemplateMode.HTML5;
     protected Boolean emailResolver = false;
     
     @Override
@@ -102,11 +102,11 @@ public abstract class AbstractBroadleafTemplateResolver implements BroadleafTemp
     }
     
     @Override
-    public BroadleafTemplateMode getTemplateMode() {
+    public UltracommerceTemplateMode getTemplateMode() {
         return templateMode;
     }
     
-    public void setTemplateMode(BroadleafTemplateMode templateMode) {
+    public void setTemplateMode(UltracommerceTemplateMode templateMode) {
         this.templateMode = templateMode;
     }
 

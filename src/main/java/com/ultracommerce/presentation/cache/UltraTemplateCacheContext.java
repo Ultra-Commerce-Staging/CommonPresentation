@@ -4,10 +4,10 @@
  * %%
  * Copyright (C) 2009 - 2016 Ultra Commerce
  * %%
- * Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
+ * Licensed under the Ultracommerce Fair Use License Agreement, Version 1.0
  * (the "Fair Use License" located  at http://license.ultracommerce.org/fair_use_license-1.0.txt)
- * unless the restrictions on use therein are violated and require payment to Broadleaf in which case
- * the Broadleaf End User License Agreement (EULA), Version 1.1
+ * unless the restrictions on use therein are violated and require payment to Ultracommerce in which case
+ * the Ultracommerce End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.ultracommerce.org/commercial_license-1.1.txt)
  * shall apply.
  * 
@@ -24,7 +24,7 @@ package com.ultracommerce.presentation.cache;
  * 
  * @author Jay Aisenbrey (cja769)
  */
-public interface BroadleafTemplateCacheContext<K, V>  {
+public interface UltracommerceTemplateCacheContext<K, V>  {
 
     public V defaultGet(final K key);
     

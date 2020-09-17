@@ -4,10 +4,10 @@
  * %%
  * Copyright (C) 2009 - 2016 Ultra Commerce
  * %%
- * Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
+ * Licensed under the Ultracommerce Fair Use License Agreement, Version 1.0
  * (the "Fair Use License" located  at http://license.ultracommerce.org/fair_use_license-1.0.txt)
- * unless the restrictions on use therein are violated and require payment to Broadleaf in which case
- * the Broadleaf End User License Agreement (EULA), Version 1.1
+ * unless the restrictions on use therein are violated and require payment to Ultracommerce in which case
+ * the Ultracommerce End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.ultracommerce.org/commercial_license-1.1.txt)
  * shall apply.
  * 
@@ -18,12 +18,12 @@
 package com.ultracommerce.presentation.dialect;
 
 /**
- * Default implementation of {@link BroadleafTagTextModifierProcessor} that provides some defaults
+ * Default implementation of {@link UltracommerceTagTextModifierProcessor} that provides some defaults
  * 
  * @author Jay Aisenbrey (cja769)
  *
  */
-public abstract class AbstractBroadleafTagTextModifierProcessor implements BroadleafTagTextModifierProcessor {
+public abstract class AbstractUltracommerceTagTextModifierProcessor implements UltracommerceTagTextModifierProcessor {
 
     @Override
     public boolean textShouldBeProcessed() {
@@ -32,11 +32,11 @@ public abstract class AbstractBroadleafTagTextModifierProcessor implements Broad
     
     @Override
     public int getPrecedence() {
-        return BroadleafProcessor.DEFAULT_PRECEDENCE;
+        return UltracommerceProcessor.DEFAULT_PRECEDENCE;
     }
 
     @Override
     public String getPrefix() {
-        return BroadleafProcessor.DEFAULT_PREFIX;
+        return UltracommerceProcessor.DEFAULT_PREFIX;
     }
 }
