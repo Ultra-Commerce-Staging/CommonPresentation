@@ -4,10 +4,10 @@
  * %%
  * Copyright (C) 2009 - 2016 Ultra Commerce
  * %%
- * Licensed under the Ultracommerce Fair Use License Agreement, Version 1.0
+ * Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
  * (the "Fair Use License" located  at http://license.ultracommerce.org/fair_use_license-1.0.txt)
- * unless the restrictions on use therein are violated and require payment to Ultracommerce in which case
- * the Ultracommerce End User License Agreement (EULA), Version 1.1
+ * unless the restrictions on use therein are violated and require payment to Broadleaf in which case
+ * the Broadleaf End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.ultracommerce.org/commercial_license-1.1.txt)
  * shall apply.
  * 
@@ -17,7 +17,7 @@
  */
 package com.ultracommerce.presentation.dialect;
 
-import com.ultracommerce.presentation.model.UltracommerceTemplateContext;
+import com.ultracommerce.presentation.model.BroadleafTemplateContext;
 
 import java.util.Map;
 
@@ -26,7 +26,7 @@ import java.util.Map;
  * 
  * @author Jay Aisenbrey (cja769)
  */
-public interface UltracommerceTagTextModifierProcessor extends UltracommerceProcessor {
+public interface BroadleafTagTextModifierProcessor extends BroadleafProcessor {
     
     /**
      * @return true if the text needs to be processed by the templating framework else false 
@@ -39,8 +39,8 @@ public interface UltracommerceTagTextModifierProcessor extends UltracommerceProc
      * @param tagAttributes A map of String to String of all of the attributes on the tag
      * @param attributeName The name of the attribute that triggered the event
      * @param attributeValue The value of the attribute that triggered the event
-     * @param context The {@link UltracommerceTemplateContext} that should be used to perform operations on the tag with
+     * @param context The {@link BroadleafTemplateContext} that should be used to perform operations on the tag with
      * @return The text that should be inserted into the tag
      */
-    public String getTagText(String tagName, Map<String, String> tagAttributes, String attributeName, String attributeValue, UltracommerceTemplateContext context);
+    public String getTagText(String tagName, Map<String, String> tagAttributes, String attributeName, String attributeValue, BroadleafTemplateContext context);
 }

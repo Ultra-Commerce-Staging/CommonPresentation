@@ -4,10 +4,10 @@
  * %%
  * Copyright (C) 2009 - 2016 Ultra Commerce
  * %%
- * Licensed under the Ultracommerce Fair Use License Agreement, Version 1.0
+ * Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
  * (the "Fair Use License" located  at http://license.ultracommerce.org/fair_use_license-1.0.txt)
- * unless the restrictions on use therein are violated and require payment to Ultracommerce in which case
- * the Ultracommerce End User License Agreement (EULA), Version 1.1
+ * unless the restrictions on use therein are violated and require payment to Broadleaf in which case
+ * the Broadleaf End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.ultracommerce.org/commercial_license-1.1.txt)
  * shall apply.
  * 
@@ -17,7 +17,7 @@
  */
 package com.ultracommerce.presentation.dialect;
 
-import com.ultracommerce.presentation.model.UltracommerceTemplateContext;
+import com.ultracommerce.presentation.model.BroadleafTemplateContext;
 
 import java.util.Map;
 
@@ -36,19 +36,19 @@ import java.util.Map;
  * the executing tag.
  * 
  * @author Jay Aisenbrey (cja769)
- * @deprecated instead of using this interface, you should instead use a {@link com.ultracommerce.common.web.expression.UltracommerceVariableExpression} in
+ * @deprecated instead of using this interface, you should instead use a {@link com.ultracommerce.common.web.expression.BroadleafVariableExpression} in
  * combination with {@code th:with} to set local variables.
  */
 @Deprecated
-public interface UltracommerceVariableModifierAttrProcessor extends UltracommerceProcessor {
+public interface BroadleafVariableModifierAttrProcessor extends BroadleafProcessor {
 
     /**
      * @param tagName The name of the tag that the attribute was triggered on
      * @param tagAttributes A map of String to String of all of the attributes on the tag
      * @param attributeName The name of the attribute that triggered the event
      * @param attributeValue The value of the attribute that triggered the event
-     * @param context The {@link UltracommerceTemplateContext} that should be used to perform operations on the tag with
+     * @param context The {@link BroadleafTemplateContext} that should be used to perform operations on the tag with
      * @return new model variables added to the local scope. Returning either an empty map or null adds no new variable definitions
      */
-    public Map<String, Object> populateModelVariables(String tagName, Map<String, String> tagAttributes, String attributeName, String attributeValue, UltracommerceTemplateContext context);
+    public Map<String, Object> populateModelVariables(String tagName, Map<String, String> tagAttributes, String attributeName, String attributeValue, BroadleafTemplateContext context);
 }

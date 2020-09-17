@@ -4,10 +4,10 @@
  * %%
  * Copyright (C) 2009 - 2016 Ultra Commerce
  * %%
- * Licensed under the Ultracommerce Fair Use License Agreement, Version 1.0
+ * Licensed under the Broadleaf Fair Use License Agreement, Version 1.0
  * (the "Fair Use License" located  at http://license.ultracommerce.org/fair_use_license-1.0.txt)
- * unless the restrictions on use therein are violated and require payment to Ultracommerce in which case
- * the Ultracommerce End User License Agreement (EULA), Version 1.1
+ * unless the restrictions on use therein are violated and require payment to Broadleaf in which case
+ * the Broadleaf End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.ultracommerce.org/commercial_license-1.1.txt)
  * shall apply.
  * 
@@ -18,14 +18,14 @@
 package com.ultracommerce.presentation.dialect;
 
 /**
- * Defines the base of what a template processor is in Ultracommerce.
+ * Defines the base of what a template processor is in Broadleaf.
  * A processor is a class that is ran when a keyword is found either as a tag name or attribute.
  * The keyword is {@link #getPrefix()} + ":" + {@link #getName()}.
  * 
  * @author Jay Aisenbrey (cja769)
  *
  */
-public interface UltracommerceProcessor {
+public interface BroadleafProcessor {
     
     /**
      * @return The name part of the keyword that this class should be triggered on.
@@ -42,14 +42,14 @@ public interface UltracommerceProcessor {
     /**
      * @return The prefix that should be prepended to the name for the class to be triggered on.
      * The "blc" part of {@code blc:price}
-     * @see {@link UltracommerceDialectPrefix}
+     * @see {@link BroadleafDialectPrefix}
      */
     public String getPrefix();
     
     /**
-     * {@link UltracommerceDialectPrefix#UC}
+     * {@link BroadleafDialectPrefix#UC}
      */
-    public static final String DEFAULT_PREFIX = UltracommerceDialectPrefix.UC;
+    public static final String DEFAULT_PREFIX = BroadleafDialectPrefix.UC;
     
     public static final int DEFAULT_PRECEDENCE = 1000;
 }
